@@ -14,25 +14,37 @@ html{
     color: #5DB557;
 }
 .navbar, .main{
-    background-image: url('main.jpg');
+    /* background-image: url('brand\ 1.jpg'); */
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    z-index: 2;
+}
+.navbar{
+    background-color: #000000;
+}
+video{
+    width: 100%;
+    height: 120vh;
+    z-index: 1;
+    position: absolute;
+    top: -20px;
 }
 /* Navbar */
 .navbar{
-    /* background-repeat: no-repeat;
-    background-attachment: fixed; */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 40px 0;
-    /* position: sticky;
-    top: 0; */
+    padding: 15px 5px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 .navbar .logo{
-    font-size: 35px;
+    font-size: 30px;
     color: #ffff;
     padding-left: 30px;
 }
@@ -47,7 +59,7 @@ html{
     text-decoration: none;
     font-size: 18px;
     padding: 15px;
-    transition: all 500ms;
+    transition: all 200ms;
 }
 
 .navbar .spread li a input{
@@ -73,7 +85,7 @@ html{
     font-size: 18px;
     padding: 15px;
     display: inline-block;
-    transition: all 500ms;
+    transition: all 200ms;
     list-style-type: none;
     position: relative;
     bottom: 10px;
@@ -86,7 +98,7 @@ html{
     padding: 10px 25px;
     border-radius: 25px;
     display: inline-block;
-    transition: all 500ms;
+    transition: all 200ms;
     align-items: center;
 }
 .navbar .dropdown .ddcontent{
@@ -96,7 +108,7 @@ html{
     left: 50px; */
     right: 45%;
     padding: 30px;
-    transition: all 500ms;
+    transition: all 200ms;
 }
 .navbar .dropdown .ddcontent li{
     width: 200px;
@@ -131,6 +143,7 @@ html{
     justify-content: space-evenly;
     color: #ffff;
     padding: 200px 150px;
+    position: relative;
 }
 .main .head h1{
     font-size: 45px;
@@ -144,7 +157,7 @@ html{
     padding: 10px;
     margin: 100px 0;
     border-radius: 30px;
-    transition: all 500ms;
+    transition: all 200ms;
     color: #ffff;
 }
 .main .buttons .join{
@@ -159,6 +172,10 @@ html{
 .wwdp .wwd{
     text-align: center;
     padding: 50px;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #747474;
+    margin: 40px 0;
 }
 .wwdp .wwd div{ 
     width: 50%;
@@ -166,22 +183,25 @@ html{
 }
 /* What we do lower img and description part */
 .aboutus{
+    background-color:  #ece1be71;
     height: 80h;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 50px;
 }
 .aboutus div img{
     width: 60%;
-    filter: grayscale(100%);
-    transition: ease-in-out 500ms;
+    z-index: 0;
   
 }
-.aboutus div img:hover{
-    filter: grayscale(0%);
-}
+
 .aboutus .aboutusdef{
     width: 48%;
+}
+.aboutus .aboutusdef div span{
+    font-size: 1.3rem;
+    color: #747474;
 }
 /* what we provide main body and top part */
 .wwpp{
@@ -212,7 +232,7 @@ html{
 .wwpp .wwp_box .box{
     background-color: #ffff;
     width: 31%;
-    transition: all 500ms;
+    transition: all 200ms;
     align-items: center;
     margin: 20px 0;
     padding: 25px;
@@ -234,6 +254,7 @@ html{
     align-items: center;
     justify-content: space-around;
     padding: 30px 15px;
+    margin: 50px 0;
 }
 .sowp .sow .sowleft, .sow .sowright{
     width: 48%;
@@ -255,8 +276,15 @@ html{
 }
 .sowp .galleryphotos .photos img{
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+}
+.img4{
+    margin-top: -200px;
+}
+.img7{
+    margin-top: -250px;
+}
+img5{
+    margin-top: 100px;
 }
 /* Our hard work parent and top */
 .ohwp{
@@ -309,8 +337,9 @@ html{
 }
 /* our plans top part  */
 .opp{
-    background-image: url('third.jpg');
+    background-image: url('shoes/shop.jpg');
     background-repeat: repeat-y;
+    background-size: contain;
     /* background-attachment: fixed; */
     padding: 50px 75px;
 }
@@ -330,6 +359,10 @@ html{
     text-align: right;
     padding-right: 0;
 }
+.opright{
+    color: #ffff;
+    font-size: 1.2rem;
+}
 /* price plans parent */
 .opp .op_price{
     display: flex;
@@ -339,20 +372,34 @@ html{
 /* Products individual boxes */
 .opp .op_price .first_part{
     background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 12px #0000;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
+    text-align: center;
     margin-top: 20px;
-    padding: 10px;
+    padding: 25px;
     width: 31%;
+    height: 500px;
+    position: relative;
+}
+.imgdes{
+    width: 100% !important;
+}
+hr{
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 .opp .op_price .first_part div{
     width: 35%;
 }
 .opp .op_price .first_part .imgw{
-    width: 80% !important;
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
 }
 .opp .op_price .first_part div img{
     width: 100%;
@@ -368,14 +415,14 @@ html{
     color: #000000;
 }
 .italic{
-    font-size: 0.9em !important;
+    font-size: 1.2em !important;
     font-style: italic;
 }
 
 /* Volunteers parent */
 .wabp{
     padding: 60px;
-    margin: 0 0 50px;
+    margin: 0 0 20px;
 }
 .wabp .wab{
     display: flex;
@@ -421,14 +468,14 @@ html{
     color: #ffff;
     background-color: #000000;
     border-radius: 50%;
-    transition: all 500ms;
+    transition: all 200ms;
 }
 .wabp .wab_volunteers .volunteers div a:hover{
     color: #D3DED3;
 }
 /* Form and information */
 .gtip{
-    padding: 60px 100px;
+    padding: 60px 80px;
 }
 .gtip .gti{
     display: flex;
@@ -463,7 +510,7 @@ html{
     background-color: rgba(211, 222, 211, 0.5);
     border-radius: 5px;
     font-size: 15px;
-    transition: all 500ms;
+    transition: all 200ms;
 }
 #submit{
     width: 100%;
@@ -473,7 +520,7 @@ html{
     border-radius: 25px;
     padding: 6px;
     font-size: 18px;
-    transition: all 500ms;
+    transition: all 200ms;
 }
 #submit:hover{
     background-color: #000000;
@@ -543,7 +590,7 @@ html{
     color: #ffff;
     background-color: #000000;
     border-radius: 50%;
-    transition: all 500ms;
+    transition: all 200ms;
 }
 .end div a:hover{
     color: #AFC1AE;
@@ -557,7 +604,21 @@ html{
     border-radius: 50%;
 }
 /* Responsive part */
+@media screen and (max-width:1440px) {
+    video{
+        display: none;
+    }
+    .main, .navbar{
+        background-image: url('main.jpg');
+    }
+}
 @media screen and (max-width:1360px) {
+    video{
+        display: none;
+    }
+    .main, .navbar{
+        background-image: url('main.jpg');
+    }
     .opp{
         padding: 10px 20px;
         padding-bottom: 50px;
@@ -621,7 +682,7 @@ html{
         width: 45%;
     }
     .wabp .wab_volunteers .volunteers img{
-        width: 45%;
+        width: 80%;
     }
 /* Form parent padding */
     .gtip{
