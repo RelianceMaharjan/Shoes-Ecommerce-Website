@@ -1,0 +1,750 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.brands{
+    color: #ffff;
+}
+.headgreen{
+    color: #5DB557;
+}
+.navbar, .main{
+    background-image: url('main.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* Navbar */
+.navbar{
+    /* background-repeat: no-repeat;
+    background-attachment: fixed; */
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 40px 0;
+    /* position: sticky;
+    top: 0; */
+}
+.navbar .logo{
+    font-size: 35px;
+    color: #ffff;
+    padding-left: 30px;
+}
+/* Navbar for laptop and higher */
+.navbar .spread{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+.navbar .spread li a{
+    color: #ffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    transition: all 500ms;
+}
+
+.navbar .spread li a input{
+    height: 2rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+}
+.navbar .spread li a i{
+    font-size: 2rem;
+}
+.searchbar{
+    position: absolute;
+    left: 50%;
+    top: 2px;
+    transform: translateX(-50%);
+    display: flex;
+}
+/* Navbar for tablet and smaller */
+.navbar .dropdown{
+    color: #ffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    display: inline-block;
+    transition: all 500ms;
+    list-style-type: none;
+    position: relative;
+    bottom: 10px;
+}
+.navbar .dropdown > a{
+    color: #ffff;
+    background-color: #5DB557;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    display: inline-block;
+    transition: all 500ms;
+    align-items: center;
+}
+.navbar .dropdown .ddcontent{
+    display: none;
+    position: absolute;
+    /* top: 90px;
+    left: 50px; */
+    right: 45%;
+    padding: 30px;
+    transition: all 500ms;
+}
+.navbar .dropdown .ddcontent li{
+    width: 200px;
+    background-color: #ffff;
+    padding: 10px 15px;
+    color: #000000;
+    text-align: center;
+    /* position: relative;
+    right: 50px; */
+}
+.navbar .dropdown .ddcontent li a{
+    text-decoration: none;
+    color: #000000;
+}
+.navbar .spread li a:hover, .main .buttons .about{
+    color: #5DB557 !important;
+}
+.navbar .dropdown:hover > .ddcontent{
+    display: inherit !important;
+}
+.active{
+    color: #5DB557 !important;
+}
+/* Home body */
+.main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #ffff;
+    padding: 200px 150px;
+}
+.main .head h1{
+    font-size: 45px;
+}
+/* Buttons in main body */
+.main .buttons .about, .main .buttons .join{
+    border: none;
+    width: 100px;
+    font-size: 15px;
+    border: solid 2px #ffff;
+    padding: 10px;
+    margin: 100px 0;
+    border-radius: 30px;
+    transition: all 500ms;
+    color: #ffff;
+}
+.main .buttons .join{
+    margin-left: 40px;
+    background-color: #5DB557;
+}
+.main .buttons .about:hover,.main .buttons .join:hover{
+    background-color: #000000;
+    color: #ffff !important;
+}
+/* What we do head part */
+.wwdp .wwd{
+    text-align: center;
+    padding: 50px;
+}
+.wwdp .wwd div{ 
+    width: 50%;
+    margin: 0 auto;
+}
+/* What we do lower img and description part */
+.aboutus{
+    height: 80h;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.aboutus div img{
+    width: 60%;
+    filter: grayscale(100%);
+    transition: ease-in-out 500ms;
+  
+}
+.aboutus div img:hover{
+    filter: grayscale(0%);
+}
+.aboutus .aboutusdef{
+    width: 48%;
+}
+/* what we provide main body and top part */
+.wwpp{
+    background-image: url('secondary.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 90px;
+    margin-top: 100px;
+}
+/* What we provide top part */
+.wwpp .wwp{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.wwpp .wwp div{
+    width: 48%;
+}
+/* What we provide box parent */
+.wwpp .wwp_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/* What we provide boxes */
+.wwpp .wwp_box .box{
+    background-color: #ffff;
+    width: 31%;
+    transition: all 500ms;
+    align-items: center;
+    margin: 20px 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.wwpp .wwp_box .box:hover{
+    background-color: #AFC1AE;
+}
+.wwpp .wwp_box .box img{
+    width: 40%;
+}
+/* See our work top part  */
+.sowp .sow{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 15px;
+}
+.sowp .sow .sowleft, .sow .sowright{
+    width: 48%;
+}
+.sowp .sow .sowleft{
+    text-align: right;
+}
+/* Gallery parent */
+.sowp .galleryphotos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: justify;
+    justify-content: space-around;
+    padding: 0 110px;
+}
+/* Individual photos width  */
+.sowp .galleryphotos .photos{
+    width: 30%;
+}
+.sowp .galleryphotos .photos img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+/* Our hard work parent and top */
+.ohwp{
+    padding: 60px;
+}
+.ohwp .ohw{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.ohwp .ohw div{
+    width: 48%;
+}
+/* Our hard work bottom part parent */
+.ohwp .ohw_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.ohwp .ohw_box .ohw_img{
+    width: 30%;
+    margin-right: 30px;
+}
+.ohwp .ohw_box .ohw_img img{
+    width: 100%;
+}
+.ohwp .ohw_box .ohw_def{
+    width: 55%;
+
+}
+.ohwp .ohw_box .ohw_def .ohw_defbox{
+    width: 100%;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+    background-color: #F9FBF9;
+    border-radius: 12px;
+    margin: 20px 0;
+    padding: 30px;
+    align-items: center;
+}
+.ohwp .ohw_box .ohw_def .ohw_defbox > .defbody{
+    width: 100%;
+}
+.ohwp .ohw_box .ohw_def .ohw_defbox_mid{
+    width: 90%;
+    position: relative;
+    left: 60px;
+}
+/* our plans top part  */
+.opp{
+    background-image: url('third.jpg');
+    background-repeat: repeat-y;
+    /* background-attachment: fixed; */
+    padding: 50px 75px;
+}
+.opp .op{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #ffff;
+}
+.opp .op .opleft, .opp .op .opright{
+    width: 48%;
+    padding: 60px;
+    padding-left: 20px;
+}
+.opp .op .opleft{
+    text-align: right;
+    padding-right: 0;
+}
+/* price plans parent */
+.opp .op_price{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/* Products individual boxes */
+.opp .op_price .first_part{
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 10px;
+    width: 31%;
+}
+.opp .op_price .first_part div{
+    width: 35%;
+}
+.opp .op_price .first_part .imgw{
+    width: 80% !important;
+}
+.opp .op_price .first_part div img{
+    width: 100%;
+}
+.opp .op_price .first_part p{
+    font-size: 1.5em;
+}
+.opp .op_price .first_part footer{
+    color: #FFC300;
+    font-size: 0.9rem;
+}
+.first_part footer span{
+    color: #000000;
+}
+.italic{
+    font-size: 0.9em !important;
+    font-style: italic;
+}
+
+/* Volunteers parent */
+.wabp{
+    padding: 60px;
+    margin: 0 0 50px;
+}
+.wabp .wab{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 80px;
+    padding: 0 80px;
+}
+.wabp .wab div{
+    width: 48%;
+}
+/* Volunteers part boxes parent */
+.wabp .wab_volunteers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/* Volunteers individual boxes */
+.wabp .wab_volunteers .volunteers{
+    width: 18%;
+    height: 475px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.wabp .wab_volunteers .volunteers img{
+    width: 90%;
+    filter: grayscale(100%);
+    transition: ease-in-out 1s;
+}
+.wabp .wab_volunteers .volunteers img:hover{
+    filter: grayscale(0%);
+}
+/* Volunteers social media link  */
+.wabp .wab_volunteers .volunteers div a{
+    margin: 5px;
+    padding: 5px 10px;
+    padding-top: 10px;
+    font-size: 25px;
+    color: #ffff;
+    background-color: #000000;
+    border-radius: 50%;
+    transition: all 500ms;
+}
+.wabp .wab_volunteers .volunteers div a:hover{
+    color: #D3DED3;
+}
+/* Form and information */
+.gtip{
+    padding: 60px 100px;
+}
+.gtip .gti{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.gtip .gti .gti_left{
+    text-align: right;
+    padding-right: 20px;
+}
+.gtip .gti div{
+    width: 48%;
+}
+/* Form and information body part */
+.gtip .gti_body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gtip .gti_body .gti_form{
+    width: 48%;
+}
+/* form design */
+.gtip .gti_body .gti_form form input,textarea{
+    width: 100%;
+    padding: 15px 5px;
+    margin: 5px 0;
+    border: none;
+    border-bottom: 1px solid #000000;
+    background-color: rgba(211, 222, 211, 0.5);
+    border-radius: 5px;
+    font-size: 15px;
+    transition: all 500ms;
+}
+#submit{
+    width: 100%;
+    border: none;
+    background-color: #5DB557;
+    color: #ffff;
+    border-radius: 25px;
+    padding: 6px;
+    font-size: 18px;
+    transition: all 500ms;
+}
+#submit:hover{
+    background-color: #000000;
+}
+#submit a{
+    text-decoration: none;
+    color: #ffff;
+}
+.gtip .gti_body .gti_form form input:focus,textarea:focus{
+    background-color: #ffff;
+    border: none;
+    outline: 3px solid #76FAC3 !important;
+    border-radius: 2px;
+}
+/* infos parent box */
+.gtip .gti_body .gti_info{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+}
+/* infos aligning */
+.gtip .gti_body .gti_info .info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.gtip .gti_body .gti_info .info i{
+    width: 20%;
+    font-size: 40px;
+}
+.gtip .gti_body .gti_info .info div{
+    width: 60%;
+}
+/* Map embed */
+.map iframe{
+    height: 50vh;
+    width: 100%;
+}
+/* footer  */
+.end{
+    background-color: #5DB557;
+    margin-top: 5px;
+    padding: 10px 0;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.end p{
+    color: #ffff;
+}
+.end p span{
+    color: #000000;
+}
+/* Website Social media links */
+.end div a{
+    margin: 5px;
+    padding: 5px 10px;
+    padding-top: 10px;
+    font-size: 25px;
+    color: #ffff;
+    background-color: #000000;
+    border-radius: 50%;
+    transition: all 500ms;
+}
+.end div a:hover{
+    color: #AFC1AE;
+}
+/* scroll to top button */
+.end > a{
+    color: #ffff;
+    font-size: 30px;
+    background-color: #000000;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+/* Responsive part */
+@media screen and (max-width:1360px) {
+    .opp{
+        padding: 10px 20px;
+        padding-bottom: 50px;
+    }
+    .opp .op_price .first_part{
+        width: 24%;
+        padding: 10px;
+    }
+    .wabp .wab_volunteers .volunteers{
+        width: 24%;
+    }
+    .searchbar{
+        left: 35%;
+    }
+}
+@media screen and (min-width:912px){
+/* Navbar assignment */
+    .navbar .dropdown{
+        display: none;
+    }
+/* Footer text format assignment */
+    .end .mob{
+        display: none;
+    }
+}
+@media screen and (max-width:912px){
+/* Navbar assignment */
+    .navbar .spread{
+        display: none;
+    }
+    .navbar .dropdown .ddcontent{
+        right: 50%;
+    }
+/* Home padding */
+    .main{
+        padding: 50px;
+    }
+/* What we do/ About us, Our hard work flex wrap managing */
+    .aboutus .aboutusdef, .ohwp .ohw_box, .ohwp .ohw_box .ohw_def{
+        width: 95%;
+    }
+    .ohwp .ohw_box .ohw_def .ohw_defbox_mid{
+        width: 100%;
+        position: inherit;
+    }
+/* What be provide individual box width */
+    .wwpp .wwp_box .box{
+        width: 45%;
+    }
+/* Priceplans width managing */
+    .opp .op_price .first_part{
+        margin-top: 15px;
+        width: 45%;
+    }
+
+    .sowp .galleryphotos .photos{
+        width: 45%;
+    }
+
+    .wabp .wab_volunteers .volunteers{
+        width: 45%;
+    }
+    .wabp .wab_volunteers .volunteers img{
+        width: 45%;
+    }
+/* Form parent padding */
+    .gtip{
+        padding: 60px 20px;
+    }
+    .end div a{
+        padding-top: 10px;
+    }
+/* footer managing */
+    .end .pc{
+        display: none;
+    }
+}
+@media screen and (max-width:612px) {
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 14px;
+    }
+/* Navbar assignment */
+    .navbar .spread{
+        display: none;
+    }
+    .navbar{
+        padding: 10px 0px;
+    }
+    .navbar .dropdown .ddcontent{
+        position: absolute;
+        right: 40%;
+    }
+/* home padding */
+    .main{
+        padding: 10%;
+    }
+    .main .head h1{
+        font-size: 25px;
+    }
+/* all parent padding and margin */
+    .wwdp, .wwpp, .opp, .ohwp, .gtip, .wspp, .sowp, .wabp, .soep{
+        padding: 20px 15px;
+        margin-top: 20px;
+    }
+/* What we do */
+    .wwdp .wwd{
+        padding: 0;
+    }
+/* What we do/ See our work / What say people/ We are best/ Our Hard work/ What we provide Form top part managing */
+    .wwdp .wwd div, .sowp .sow div, .ohwp .ohw div, .wspp .wsp div, .wwpp .wwp div, .wabp .wab div, .gtip .gti div{
+        padding: 10px 0;
+        width: 98%;
+        text-align: center;
+    }
+/* Galler and About us stats managing */
+    .sowp .galleryphotos{
+        padding: 0 35%;
+    }
+/* What we provide individual box managing */
+    .wwpp .wwp_box .box{
+        width: 90%;
+    }
+/* Gallery managing */
+    .sowp .galleryphotos{
+        padding: 10px;
+    }
+    .sowp .galleryphotos .photos{
+        width: 100%;
+    }
+    .sowp .galleryphotos .photos img{
+        width: 100%;
+    }
+/* Record managing */
+    .record .record_box{
+        width: 45%;
+    }
+    .ohwp .ohw_box .ohw_img{
+        width: 94%;
+    }
+    .ohwp .ohw_box .ohw_def .ohw_defbox span i{
+        width: 94%;
+    }
+    .ohwp .ohw_box .ohw_def .ohw_defbox .defbody, .gtip .gti_body .gti_form{
+        width: 90%;
+    }
+    .opp .op .opleft, .opp .op .opright, .soep .soe .soeleft, .soep .soe .soeright{
+        padding: 10px 5px;
+        text-align: center;
+        width: 90%;
+    }
+/* Priceplans box managing */
+    .opp .op_price .first_part{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .wspp .wsp, .wabp .wab{
+        padding: 0;
+    }
+    .wabp .wab_volunteers .volunteers{
+        width: 85%;
+    }
+    .wabp .wab_volunteers .volunteers img{
+        width: 45%;
+    }
+/* Form managing */
+    .gtip .gti_body .gti_info .info{
+        margin: 20px 0;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .gtip .gti_body .gti_info .info i{
+        position: relative;
+        right: 20px;
+    }
+    .gtip .gti_body .gti_info .info div{
+        width: 70%;
+    }
+/* Footer assignment */
+    .end .pc{
+        display: none;
+    }
+}
